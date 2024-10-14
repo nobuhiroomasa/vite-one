@@ -2,13 +2,27 @@
 <!-- npm run deploy -->
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- キャッシュを無効にするためのメタタグ -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>ミニゲーム集</title>
+    <!-- Google Fontsの追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDKの読み込み -->
+    <!-- FirebaseのAuthとFirestoreモジュールの読み込み -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
     <link rel="stylesheet" crossorigin href="/vite-one/assets/index-CW_Lxpki.css">
   </head>
   <body>
     <header>
       <ul class="header">
-          <li><a href="/Asteroid/asteroid.htm">Asteroid</a></li>
+          <li><a href="/vite-one/Asteroid/asteroid.htm">Asteroid</a></li>
           <li><a href="/docs/Blocks/blocks.htm">Blocks</a></li>
           <li><a href="/docs//MineSweeper/minesweeper.html">MineSweeper</a></li>
           <li><a href="/docs//Cave/cave.html">Cave</a></li>
@@ -31,6 +45,46 @@
       </div>
       
     </header>
+
+    <h1>ミニゲーム集へようこそ！</h1>
+
+    <div class="game-list">
+        <div class="game-item">
+            <a href="Asteroid/asteroid.htm">Asteroid</a>
+        </div>
+        <div class="game-item">
+            <a href="Blocks/blocks.htm">Blocks</a>
+        </div>
+        <div class="game-item">
+            <a href="MineSweeper/minesweeper.html">MineSweeper</a>
+        </div>
+        <div class="game-item">
+            <a href="Cave/cave.html">Cave</a>
+        </div>
+        <div class="game-item">
+            <a href="MissileCommand/missilecommand.htm">MissileCommand</a>
+        </div>
+        <div class="game-item">
+            <a href="Qix/Qix.htm">Qix</a>
+        </div>
+        <div class="game-item">
+            <a href="Invader/SpaceInvader.htm">Invader</a>
+        </div>
+        <div class="game-item">
+            <a href="Memorizer/memorizer.html">Memorizer</a>
+        </div>
+        <div class="game-item">
+            <a href="SnakeBite/SnakeBite.html">SnakeBite</a>
+        </div>
+        <div class="game-item">
+            <a href="Tetris/Tetris.htm">Tetris</a>
+        </div>
+    </div>
+
+    <div class="auth-buttons">
+        <button id="login-button" class="auth-button">ログイン</button>
+        <button id="signup-button" class="auth-button">新規登録</button>
+    </div>
 
   </body>
 </html>
