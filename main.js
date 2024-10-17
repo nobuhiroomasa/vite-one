@@ -4,7 +4,7 @@
 import { setupCounter } from './counter.js'
 
 document.querySelector('#header').innerHTML = `
-    <header >
+
       <ul class="header">
           <li class="asteroid"><a href="/vite-one/Asteroid/asteroid.htm">Asteroid</a></li>
           <li class="Blocks"><a href="/vite-one/Blocks/blocks.htm">Blocks</a></li>
@@ -20,7 +20,7 @@ document.querySelector('#header').innerHTML = `
       </ul>
 
       
-    </header>
+
 `
 
 setupCounter(document.querySelector('#counter'))
