@@ -18,17 +18,19 @@ document.querySelector('#app').innerHTML = `
           <li><a href="/vite-one/Tetris/Tetris.htm">Tetris</a></li>
           <li><a href="/vite-one/index.html">Top</a></li>
       </ul>
-      <div class="account-container">
-          <div class="account-name" id="account-name"></div> <!-- アカウント名を表示する部分 -->
-          <div class="dropdown-menu" id="dropdown-menu">
-              <div class="nickname-input">
-                  <input type="text" id="nickname" placeholder="ニックネームを入力" />
-                  <button id="save-nickname">保存</button>
-              </div>
-          </div>
-      </div>
+
       
     </header>
 `
 
 setupCounter(document.querySelector('#counter'))
+
+{/* <div class="account-container">
+<div class="account-name" id="account-name"></div> <!-- アカウント名を表示する部分 -->
+<div class="dropdown-menu" id="dropdown-menu">
+    <div class="nickname-input">
+        <input type="text" id="nickname" placeholder="ニックネームを入力" />
+        <button id="save-nickname">保存</button>
+    </div>
+</div>
+</div> */}
