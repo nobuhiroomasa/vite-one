@@ -18,7 +18,7 @@
             <p>矢印キーで宇宙船を左右に動かしたり、前進させたりすることができます。</p>
             <p>スペースキーを押すと弾を発射し、隕石を破壊することができます。</p>
             <p>隕石を避けながら、できるだけ高いスコアを目指してください！</p>
-            <button id="startButton" onclick="init()">ゲームを開始</button> <!-- ここでinit()を呼び出す -->
+            <button id="startButton" onclick="window.init()">ゲームを開始</button>
         </div>
     </div>
 
@@ -30,6 +30,10 @@
     <img id="rock" src="rock.png" style="display:none;" />
     <img id="bang" src="bang.png" style="display:none;" />
 
-    <script src="script.js"></script>
+    <div>
+        <h2 id = "score"></h2>
+    </div>
+
+    <script type = "module" scr="script.js"></script>
 </body>
 </html>

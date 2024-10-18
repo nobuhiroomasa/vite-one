@@ -3,14 +3,14 @@ import { getUserEmail } from './firebaseConfig.js'
 
 import { setupCounter } from './counter.js'
 
-getUserEmail().then((email) => {
-    const emailElement = document.getElementById('user-email');
-    if (email) {
-        emailElement.textContent = `${email}`;
-    } else {
-        console.log('ログイン中のユーザーはいません');
-    }
-});
+// getUserEmail().then((email) => {
+//     const emailElement = document.getElementById('user-email');
+//     if (email) {
+//         emailElement.textContent = `${email}`;
+//     } else {
+//         console.log('ログイン中のユーザーはいません');
+//     }
+// });
 
 
 document.querySelector('#header').innerHTML = `
@@ -27,7 +27,7 @@ document.querySelector('#header').innerHTML = `
           <li class="SnakeBite"><a href="/vite-one/SnakeBite/SnakeBite.html">SnakeBite</a></li>
           <li class="Tetris"><a href="/vite-one/Tetris/Tetris.htm">Tetris</a></li>
           <li><a href="/vite-one/index.html">Top</a></li>
-          <li id="user-email">ユーザー</li>
+
       </ul>
 
       
