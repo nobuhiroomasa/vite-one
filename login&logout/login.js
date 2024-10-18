@@ -1,4 +1,4 @@
-import { loginUser } from '../firebaseConfig';
+import { loginUser } from 'firebaseConfig.js';
 
 // ログインボタンのクリックイベントを設定
 document.getElementById('login-button').addEventListener('click', async () => {
