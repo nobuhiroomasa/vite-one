@@ -22,6 +22,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+export {auth,db};
+
 // ログインしているユーザー情報を取得する関数
 export const getCurrentUser = () => {
     return new Promise((resolve, reject) => {
@@ -33,6 +35,17 @@ export const getCurrentUser = () => {
             }
         });
     });
+};
+
+// ログイン中のユーザーのEメールを取得する関数
+export const getUserEmail = async () => {
+    try {
+        const user = await getCurrentUser(); // 現在のユーザー情報を取得
+        return user.email;  // ログイン中のユーザーのEメールを返す
+    } catch (error) {
+        console.error('ユーザーがログインしていません: ', error);
+        return null;  // ユーザーがログインしていない場合、nullを返す
+    }
 };
 
 // Firestoreからユーザーデータを取得する関数
