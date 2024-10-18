@@ -1,5 +1,4 @@
 // import '/style.css';
-import { getUserEmail } from './firebaseConfig.js'
 
 import { setupCounter } from './counter.js'
 
@@ -11,8 +10,6 @@ import { setupCounter } from './counter.js'
 //         console.log('ログイン中のユーザーはいません');
 //     }
 // });
-const e = getUserEmail();
-console.log(e);
 
 document.querySelector('#header').innerHTML = `
 
