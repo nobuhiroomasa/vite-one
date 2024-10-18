@@ -7,10 +7,7 @@
 </head>
 
 <body>
-    <!-- ヘッダーを上に表示する -->
     <div id="header"></div>
-    <script type="module" src="/vite-one/main.js"></script>
-
     <div id="modal">
         <div class="modal-content">
             <h1>チュートリアル</h1>
@@ -31,9 +28,12 @@
     <img id="bang" src="bang.png" style="display:none;" />
 
     <div>
-        <h2 id = "score"></h2>
+        <h2 id="score"></h2>
     </div>
 
-    <script type = "module" scr="script.js"></script>
+    <!-- 修正: srcを正しく指定 -->
+    <script type="module" src="/vite-one/main.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>

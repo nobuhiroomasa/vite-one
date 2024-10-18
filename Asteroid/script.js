@@ -1,4 +1,4 @@
-import { getUserEmail,saveScoreAndEmail } from './firebaseConfig.js'
+import { getUserEmail,saveScoreAndEmail } from '../firebaseConfig.js'
 
 
 
@@ -215,7 +215,7 @@ function mainLoop() {
     draw();
 }
 
-function draw() {
+async function draw() {
     // 背景を描画
     ctx.drawImage(bg, bgX, bgY, 400, 400, 0, 0, 800, 800);
 
@@ -251,8 +251,8 @@ function draw() {
         ctx.fillText('GAME OVER', 320, 150);
         ctx.drawImage(bang, ship.getX() - 50, ship.getY() - 50, 200, 200);
         const title = document.title;
-        const userEmail = getUserEmail();
-        saveScoreAndEmail( title, score, userEmail);
+        const userEmail = await getUserEmail();
+        await saveScoreAndEmail( title, score, userEmail);
 
     }
 }

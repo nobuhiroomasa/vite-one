@@ -11,7 +11,8 @@ import { setupCounter } from './counter.js'
 //         console.log('ログイン中のユーザーはいません');
 //     }
 // });
-
+const e = getUserEmail();
+console.log(e);
 
 document.querySelector('#header').innerHTML = `
 
@@ -34,7 +35,7 @@ document.querySelector('#header').innerHTML = `
 
 `
 
-setupCounter(document.querySelector('#counter'))
+// setupCounter(document.querySelector('#counter'))
 
 {/* <div class="account-container">
 <div class="account-name" id="account-name"></div> <!-- アカウント名を表示する部分 -->
