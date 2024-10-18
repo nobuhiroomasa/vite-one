@@ -8,10 +8,7 @@ body {
 
 header {
   background-color: #333;
-  padding: 10px 20px; /* 上下の余白を少し減らす */
-  display: flex;
-  justify-content: space-between; /* 左右の要素を配置 */
-  align-items: center; /* 中央揃え */
+  padding: 20px 0;
 }
 
 .header {
@@ -19,14 +16,11 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; /* 要素が折り返すように */
-  justify-content: center; /* 中央揃え */
-  max-width: 100%; /* ヘッダーの最大幅を設定 */
-  overflow: hidden; /* はみ出す要素を非表示 */
+  justify-content: center;
 }
 
 .header li {
-  margin: 0 10px; /* マージンを調整 */
+  margin: 0 20px;
 }
 
 .header a {
@@ -34,27 +28,13 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  padding: 10px 15px; /* パディングを調整 */
+  padding: 15px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .header a:hover {
   background-color: #555;
-}
-
-.account-name {
-  background-color: #4285F4; /* Googleの青色 */
-  color: #fff; /* 白い文字 */
-  border-radius: 50%; /* 丸くする */
-  width: 50px; /* 幅を50pxに調整 */
-  height: 50px; /* 高さを50pxに調整 */
-  display: flex;
-  justify-content: center; /* 中央揃え */
-  align-items: center; /* 中央揃え */
-  font-weight: bold; /* 太字 */
-  font-size: 24px; /* フォントサイズを24pxに調整 */
-  margin-left: 10px; /* マージンを調整 */
 }
 
 h1 {
@@ -117,6 +97,22 @@ h1 {
 .auth-button:hover {
   background-color: #555;
 }
+
+.account-name {
+  background-color: #4285F4; /* Googleの青色 */
+  color: #fff; /* 白い文字 */
+  border-radius: 50%; /* 丸くする */
+  width: 50px; /* 幅を50pxに調整 */
+  height: 50px; /* 高さを50pxに調整 */
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 中央揃え */
+  font-weight: bold; /* 太字 */
+  font-size: 24px; /* フォントサイズを24pxに調整 */
+  margin-left: 10px; /* マージンを調整 */
+}
+
+
      
      /* アカウントコンテナとドロップダウンメニューの基本スタイル */
       .account-container {
