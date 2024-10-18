@@ -4,7 +4,7 @@
     <title>Blocks Game</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script type= "module"src="script.js" defer></script>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
             <h1>チュートリアル</h1>
             <p>このゲームでは、パドルを操作してボールを弾き、ブロックを全て壊してください。</p>
             <p>難易度を選択してください：</p>
-            <button class="difficulty-button" onclick="startGame('Easy')">Easy</button>
-            <button class="difficulty-button" onclick="startGame('Normal')">Normal</button>
-            <button class="difficulty-button" onclick="startGame('Hard')">Hard</button>
+            <button class="difficulty-button" onclick="window.startGame('Easy')">Easy</button>
+            <button class="difficulty-button" onclick="window.startGame('Normal')">Normal</button>
+            <button class="difficulty-button" onclick="window.startGame('Hard')">Hard</button>
         </div>
     </div>
 
