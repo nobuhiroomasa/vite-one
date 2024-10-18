@@ -1,4 +1,4 @@
-import { loginUser } from 'firebaseConfig.js';
+import { loginUser } from '/vite-one/firebaseConfig.js';
 
 // ログインボタンのクリックイベントを設定
 document.getElementById('login-button').addEventListener('click', async () => {
