@@ -1,4 +1,4 @@
-import { getUserEmail,saveScoreAndEmail } from '../firebaseConfig.js'
+import { getUserEmail,saveScoreAndEmail,displayDataInHTMLRealtime } from '../firebaseConfig.js'
 
 
 
@@ -256,4 +256,6 @@ async function draw() {
 
     }
 }
+const title = document.title;
 
+displayDataInHTMLRealtime(title);

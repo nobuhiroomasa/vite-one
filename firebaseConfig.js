@@ -4,7 +4,7 @@
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
 import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
-import { getFirestore, collection, addDoc, getDocs, query, where, updateDoc, doc  } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+import { getFirestore, collection, addDoc, getDocs, query, where, updateDoc, doc, onSnapshot  } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
 
 // Firebaseの設定情報
 const firebaseConfig = {
@@ -49,9 +49,9 @@ export const getUserEmail = async () => {
 };
 
 // Firestoreからユーザーデータを取得する関数
-export const getUsersFromFirestore = async () => {
+export const getDatasFromFirestore = async (data) => {
     try {
-        const querySnapshot = await getDocs(collection(db, 'users'));
+        const querySnapshot = await getDocs(collection(db, data));
         const users = [];
         querySnapshot.forEach((doc) => {
             users.push({ id: doc.id, data: doc.data() });
@@ -123,6 +123,41 @@ export async function saveScoreAndEmail(collectionName, score, email) {
         console.error("エラーが発生しました: ", e);
     }
 }
+
+// スコアボードにランキングを表示する関数（リアルタイム更新対応）
+export const displayDataInHTMLRealtime = (collectionName) => {
+    try {
+        const scoreListElement = document.getElementById('scorelist'); // データを挿入するHTML要素を取得
+
+        // Firestoreのコレクションを監視し、リアルタイム更新
+        const collectionRef = collection(db, collectionName);
+        onSnapshot(collectionRef, (snapshot) => {
+            const scores = [];
+
+            // スナップショットからデータを取得し、スコアを大きい順に並べ替え
+            snapshot.forEach(doc => {
+                scores.push({ id: doc.id, data: doc.data() });
+            });
+
+            // scoreListElementを初期化
+            scoreListElement.innerHTML = '';
+
+            // スコアを降順に並べ替え
+            scores.sort((a, b) => b.data.score - a.data.score);
+            let rank = 1;
+            // 取得したデータを一行ずつHTMLに表示
+            scores.forEach(score => {
+                const accountName = score.data.email.slice(0, 10);
+                const scoreElement = document.createElement('p'); // 各データを表示するための <p> 要素を作成
+                scoreElement.textContent = `${rank} ,ID: ${accountName}, スコア: ${score.data.score}`; // 各データを設定
+                scoreListElement.appendChild(scoreElement); //  <p> 要素を追加
+                rank++;
+            });
+        });
+    } catch (error) {
+        console.error('データの表示中にエラーが発生しました:', error);
+    }
+};
 
 
 

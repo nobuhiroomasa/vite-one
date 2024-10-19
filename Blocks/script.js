@@ -1,4 +1,4 @@
-import { getUserEmail,saveScoreAndEmail } from '../firebaseConfig.js'
+import { getUserEmail,saveScoreAndEmail, displayDataInHTMLRealtime } from '../firebaseConfig.js'
 
 
 "use strict";
@@ -197,6 +197,6 @@ function draw() {
     ctx.fillText('スコア: ' + score + ' | 時間: ' + elapsedTime + '秒 | 難易度: ' + difficulty, 20, 30);
 }
 
+const title = document.title;
 
-// const userEmail = await getUserEmail();
-// await saveScoreAndEmail( title, score, userEmail);
+displayDataInHTMLRealtime(title);
