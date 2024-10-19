@@ -1,15 +1,7 @@
-// import '/style.css';
 
 import { setupCounter } from './counter.js'
 
-// getUserEmail().then((email) => {
-//     const emailElement = document.getElementById('user-email');
-//     if (email) {
-//         emailElement.textContent = `${email}`;
-//     } else {
-//         console.log('ログイン中のユーザーはいません');
-//     }
-// });
+
 
 document.querySelector('#header').innerHTML = `
 
